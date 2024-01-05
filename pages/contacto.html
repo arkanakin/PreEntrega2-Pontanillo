@@ -10,26 +10,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <!--<link rel="stylesheet" href="css/custom.css">-->
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 </head>
 <body class="contactoBody">
-    <header>
-        <nav>
-            <ul class="navbar">
-                <a href="" class="logo"><img src="../img/InvitArteStudioLogoRedondoFondo.png" alt=""></a>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Ejemplos</a></li>
-                <li><a href="">Tienda</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!--Menu Redes Sociales-->
+    <div class="bg-dark py-2 d-sm-flex justify-content-center d-none">
+        <a href="" class="text-white mx-4"><span class="bi bi-facebook"></span></a>
+        <a href="" class="text-white mx-4"><span class="bi bi-instagram"></span></a>
+        <a href="" class="text-white mx-4"><span class="bi bi-twitter-x"></span></a>
+        <a href="" class="text-white mx-4"><span class="bi bi-youtube"></span></a>
+        <a href="" class="text-white mx-4"><span class="bi bi-whatsapp"></span></a>
+    </div>
+
+    <!--Menu Principal-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <!-- Logo de menu -->
+            <a href="" class="navbar-brand">
+                <img src="../img/InvitArteStudioLogoRedondoFondo.png" alt="" width="80" class="me-2">
+            </a>
+            <!--Boton Responsive-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse pb-2 pb-lg-0" id="navbarSupportedContent">
+                <ul class="navbar ms-auto mb-2 mb-lg-0 me-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonios.html">Reseñas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ejemplos.html">Ejemplos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Ayuda</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-dark btn- rounded-pill" data-bs-toggle="modal" data-bs-target="#modalContacto">Contáctanos</button>
+                </div>
+            </div>
+        </div>
+    </nav>
     <section>
         <div class="contacto">
             <form class="my-form">
                 <div class="container">
-                <h1>Contactanos!</h1>
+                <h1 style="text-align: center;">Ayuda</h1>
                 <ul>
                     <li>
                     <select>
@@ -92,4 +127,45 @@
         </div>
     </div>
 </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="modalContacto" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+             <div class="modal-content">
+                  <div class="modal-header">
+                       <h5 class="modal-title">Escribenos un mensaje...</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+
+
+                  <div class="modal-body p-4">
+                       <form class="row">
+                            <div class="col-12 col-sm-6 mb-3">
+                                 <label for="name">Nombre</label>
+                                 <input type="text" class="form-control" id="name">
+                            </div>
+
+
+                            <div class="col-12 col-sm-6 mb-3">
+                                 <label for="email">Email</label>
+                                 <input type="text" class="form-control" id="email">
+                            </div>
+
+
+                            <div class="col-12 mb-3">
+                                 <label for="mensaje-text">Mensaje</label>
+                                 <textarea class="form-control" id="mensaje-text"></textarea>
+                            </div>
+
+                       </form>
+                  </div>
+
+
+                  <div class="modal-footer p-0">
+                       <button type="button" class="boton w-100 rounded-0 m-0">Enviar mensaje</button>
+                  </div>
+             </div>
+        </div>
+   </div>
+<script src="../js/imagenes.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>
